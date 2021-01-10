@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">blog</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xl="4" size-lg="4" size-md="6" size-md="6" size="12">
+        <ion-card class="ion-text-center">
+          <img src="https://picsum.photos/id/238/200/300" />
+          <ion-card-header>
+            <ion-icon name="pin" slot="start"></ion-icon>
+            <ion-card-subtitle class="ion-text-center"
+              >Lorem Ipsum</ion-card-subtitle
+            >
+            <ion-card-title class="ion-text-center"
+              >Mi Perrete Rete</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content>
+            Keep close to Nature's heart... and break clear away, once in
+            awhile, and climb a mountain or spend a week in the woods. Wash your
+            spirit clean.
+          </ion-card-content>
+          <ion-card *ngFor="let coment of comments">
+            <ion-card-header>
+              <ion-card-subtitle>{{coment.author}}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content> {{coment.comment}} </ion-card-content>
+          </ion-card>
+                <ion-card>
+                  <ion-card-header
+                    >Did you like it? Please share your
+                    thoughts</ion-card-header
+                  >
+                  <ion-card-content>
+                    <ion-input class="ion-card-subtitle"
+                      type="text"
+                      placeholder="your name"
+                      [(ngModel)]="author"
+                    ></ion-input>
+                    <ion-input
+                      type="text"
+                      placeholder="your message"
+                      [(ngModel)]="comment"
+                    ></ion-input>
+                  </ion-card-content>
+                  <ion-button (click)="publish()">Publish</ion-button>
+                </ion-card>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xl="4" size-lg="4" size-md="6" size-md="6" size="12">
+        <ion-card class="ion-text-center">
+          <img src="https://picsum.photos/id/238/200/300" />
+          <ion-card-header>
+            <ion-icon name="pin" slot="start"></ion-icon>
+            <ion-card-subtitle class="ion-text-center"
+              >Lorem Ipsum</ion-card-subtitle
+            >
+            <ion-card-title class="ion-text-center"
+              >Mi Perrete Rete</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content>
+            Keep close to Nature's heart... and break clear away, once in
+            awhile, and climb a mountain or spend a week in the woods. Wash your
+            spirit clean.
+          </ion-card-content>
+          <ion-card *ngFor="let coment of comments">
+            <ion-card-header>
+              <ion-card-subtitle>{{coment.author}}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content> {{coment.comment}} </ion-card-content>
+          </ion-card>
+                <ion-card>
+                  <ion-card-header
+                    >Did you like it? Please share your
+                    thoughts</ion-card-header
+                  >
+                  <ion-card-content>
+                    <ion-input class="ion-card-subtitle"
+                      type="text"
+                      placeholder="your name"
+                      [(ngModel)]="author"
+                    ></ion-input>
+                    <ion-input
+                      type="text"
+                      placeholder="your message"
+                      [(ngModel)]="comment"
+                    ></ion-input>
+                  </ion-card-content>
+                  <ion-button (click)="publish()">Publish</ion-button>
+                </ion-card>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>nba</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col size-xl="6" size-lg="6" size-md="6" size-md="6" size='12'>
+      <ion-card class="ion-text-center" *ngFor="let players of nba">
+        <ion-title>{{players.year}}</ion-title>
+        <h1>{{players.champion}}</h1>
+        <img src="{{players.logo}}" alt=""/>
+      <h1>MVP's</h1>
+      <ion-list class='ion-text-center'>
+          <ion-item class='ion-text-center' *ngFor="let mvp of players.player">
+            {{ mvp }} </ion-item>
+          </ion-list>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
